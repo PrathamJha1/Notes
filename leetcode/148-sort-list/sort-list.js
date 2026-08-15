@@ -38,13 +38,11 @@ var sortList = function(head) {
         const dummy = newHead
         while(left != null && right != null){
             if(left.val < right.val){
-                const node = new ListNode(left.val)
-                newHead.next = node
+                newHead.next = left
                 left = left.next
             }
             else{
-                const node = new ListNode(right.val)
-                newHead.next = node
+                newHead.next = right
                 right = right.next
             }
             newHead = newHead.next
